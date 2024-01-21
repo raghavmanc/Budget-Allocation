@@ -25,14 +25,13 @@ export const AppReducer = (state, action) => {
                     ...state,
                 };
             } else {
-                alert(`value remmaining ${state.budget - state.expenses.reduce((total,item)=>{
-                    return (total = total + item.cost)
-                },0)}`);
+                alert(`Cannot reduce budget lower than the spending`);
                 return {
                     ...state
                 }
             }
             case 'RED_EXPENSE':
+                
                 const red_expenses = state.expenses.map((currentExp)=> {
                     if (currentExp.name === action.payload.name && currentExp.cost - action.payload.cost >= 0) {
                         currentExp.cost =  currentExp.cost - action.payload.cost;
@@ -82,7 +81,7 @@ export const AppReducer = (state, action) => {
 const initialState = {
     budget: 2000,
     expenses: [
-        { id: "Marketing", name: 'Marketing', cost: 50 },
+        { id: "Marketing", name: 'Marketing', cost: 1050 },
         { id: "Finance", name: 'Finance', cost: 300 },
         { id: "Sales", name: 'Sales', cost: 70 },
         { id: "Human Resource", name: 'Human Resource', cost: 40 },

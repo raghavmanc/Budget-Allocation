@@ -10,6 +10,7 @@ import Remaining from './components/Remaining';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
 import ChangeAllocation from './components/ChangeAllocation';
+import Location from './components/Location';
 
 const App = () => {
     return (
@@ -25,7 +26,10 @@ const App = () => {
                         </div>
                         <div className='col-sm'>
                             <ExpenseTotal />
-                        </div>                       
+                        </div>
+                        <div className='col-sm'>
+                            <Location />
+                        </div>                          
 
                 </div>
                 <h3>Expenses</h3>

@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const ChangeAllocation = (props) => {
-    const { dispatch} = useContext(AppContext);
+    const { dispatch, currency} = useContext(AppContext);
 
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
@@ -43,6 +43,7 @@ const ChangeAllocation = (props) => {
                 <option value="Finance" name="Finance">Finance</option>
                 <option value="Sales" name="Sales">Sales</option>
                 <option value="Human Resource" name="Human Resource">Human Resource</option>
+                <option value="IT" name="IT">IT</option>
               
                   </select>
 
@@ -54,7 +55,7 @@ const ChangeAllocation = (props) => {
                 <option value="Reduce" name="Reduce">Reduce</option>
                   </select>  
                   <span className="eco" style={{ marginLeft: '2rem', marginRight: '8px'}}></span>
-                    <span>$</span>
+                  <span>{currency}</span>
                     <input
                         className='ml-5'
                         required='required'
@@ -64,7 +65,7 @@ const ChangeAllocation = (props) => {
                         style={{size: 10}}
                         onChange={(event) => setCost(event.target.value)}>
                         </input>
-
+                    
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>
                         Save
                     </button>
