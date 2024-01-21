@@ -7,9 +7,9 @@ const ExpenseItem = (props) => {
        <tr>
         <td>{props.name}</td>
         <td>{props.cost}</td>
-        <td><FaPlus size='2.2em' color="green" ></FaPlus></td>
-        <td><FaMinus size='2.2em' color="red" ></FaMinus></td>
-        <td><FaTimesCircle size='2.2em' color="black" ></FaTimesCircle></td>
+        <td><FaPlus size='1.6em' color="green" ></FaPlus></td>
+        <td><FaMinus size='1.6em' color="red" ></FaMinus></td>
+        <td><FaTimesCircle size='1.6em' color="black " ></FaTimesCircle></td>
        </tr>
     )
 }

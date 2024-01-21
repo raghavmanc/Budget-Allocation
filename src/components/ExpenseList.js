@@ -1,14 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
 import ExpenseItem from "./ExpenseItem";
+import { AppContext } from "../context/AppContext";
 
 const ExpenseList = () => {
-    const expenses = [
-        
-        {id: 1, name: "Marketing", cost: 1000 },
-        {id: 1, name: "Finance", cost: 1000 },
-        {id: 1, name: "Sales", cost: 1000 },
-        {id: 1, name: "Human Resources", cost: 1000 }
-    ] 
+    const {expenses} = useContext(AppContext);
 
     return(
 

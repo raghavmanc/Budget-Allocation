@@ -25,7 +25,9 @@ export const AppReducer = (state, action) => {
                     ...state,
                 };
             } else {
-                alert("Cannot increase the allocation! Out of funds");
+                alert(`value remmaining ${state.budget - state.expenses.reduce((total,item)=>{
+                    return (total = total + item.cost)
+                },0)}`);
                 return {
                     ...state
                 }

@@ -9,6 +9,7 @@ import { AppProvider } from './context/AppContext';
 import Remaining from './components/Remaining';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
+import ChangeAllocation from './components/ChangeAllocation';
 
 const App = () => {
     return (
@@ -33,7 +34,12 @@ const App = () => {
                         <ExpenseList />
                     </div>
                 </div>
-                    
+                <h3 className='mt-3'>Change Allocation</h3>
+                <div className='row mt-3'>
+                    <div className='col-sm'>
+                        <ChangeAllocation/>
+                    </div>
+                </div>
     
             </div>
         </AppProvider>
